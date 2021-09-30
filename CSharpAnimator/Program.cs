@@ -10,7 +10,7 @@ namespace CSharpAnimator
 {
     class Program
     {
-        //Witam
+        static string Version = "1.0~official";
         static int k = 0;
         
         static string sciezka = " ";
@@ -394,7 +394,7 @@ namespace CSharpAnimator
                     }
                     Console.Write("\n");
                 }
-            Console.WriteLine("Made by drenewoo (Wojciech Wójtowicz)" + "\n" + "CSharpAnimator 0.6~official"); // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
+            Console.WriteLine("Made by drenewoo (Wojciech Wójtowicz)" + "\n" + "CSharpAnimator " + Version); // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
             Thread.Sleep(100);
                 Console.Clear();     
         }
@@ -595,7 +595,7 @@ namespace CSharpAnimator
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\n"+"Przykładowy piksel ma wyglądać tak:" + "\n" + "\n" + "1" + "\n" + "0" + "\n" + "0" + "\n" + "15" + "\n" + "\n" + "z tego wyjdzie jeden piksel w lewym górnym rogu o kolorze białym w klatce 1.");
                 Console.WriteLine("\n" + "Kody klatki: info - informacje | w - zakończ tworzenie, opdal animację | ws nazwa_pliku_txt - zakończ tworzenie, odpal animację i zapisz ją do pliku txt (pliki txt są tworzone na dysku C: wśród folderów Windows,Program Files więc upewnij się że nie ma tam pliku txt o takiej samej nazwie)");
-                Console.WriteLine("\n" + "Twórca: Wojciech Wójtowicz/drenewoo     | Wersja programu: 0.6~official" + "\n"); // <== zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | change offcial to modded if you modified code. Thanks!
+                Console.WriteLine("\n" + "Twórca: Wojciech Wójtowicz/drenewoo     | Wersja programu: " + Version + "\n"); // <== zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | change offcial to modded if you modified code. Thanks!
                 Console.WriteLine("" + "\n");  //<== tutaj wpisz swój nick jeśli zmodyfikowałeś kod. Dziękuje! | write here your nick if you modified code. Thank you! 
                 Console.WriteLine("Kliknij enter jeśli chcesz wrócić");
                 Console.ReadLine();
