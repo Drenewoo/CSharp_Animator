@@ -10,7 +10,7 @@ namespace CSharpAnimator
 {
     class Program
     {
-        
+        //Witam
         static int k = 0;
         
         static string sciezka = " ";
