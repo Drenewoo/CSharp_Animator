@@ -10,7 +10,7 @@ namespace CSharpAnimator
 {
     class Program
     {
-        static string Version = "1.0~official";
+        static string Version = "1.0.1~official";
         static int k = 0;
         
         static string sciezka = " ";
@@ -23,7 +23,7 @@ namespace CSharpAnimator
        
         static void Main(string[] args)
         {
-            Console.Title = "CSharp Animator 0.6";
+            Console.Title = "CSharp Animator "+Version;
             Console.SetWindowSize(130, 45);
             Fresh();
             testanim();        
@@ -225,7 +225,7 @@ namespace CSharpAnimator
             twr.WriteLine("w");
             twr.Close();
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("Zapisano! Chcesz teraz obejrzeć swoją animację?   Tak/Nie");
+            Console.WriteLine("Zapisano! Chcesz obejrzeć swoją animację? (tak/nie)");
             string s = Console.ReadLine();
             if (s.ToLower() == "tak")
             {
@@ -394,7 +394,7 @@ namespace CSharpAnimator
                     }
                     Console.Write("\n");
                 }
-            Console.WriteLine("Made by drenewoo (Wojciech Wójtowicz)" + "\n" + "CSharpAnimator " + Version); // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
+            Console.WriteLine("Stworzone przez drenewoo (Wojciech Wójtowicz)" + "\n" + "CSharp Animator " + Version); // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
             Thread.Sleep(100);
                 Console.Clear();     
         }
@@ -413,8 +413,8 @@ namespace CSharpAnimator
         }
         static void testanim()
         {
-            Console.WriteLine("Po informacje wpisz info i kliknij enter albo rób co masz robić jeśli wiesz o co chodzi");
-            Console.Write("Zakres wartości x wynosi 69, y wynosi 29, a ilość klatek 1199. Kolory to:" + " ");
+            Console.WriteLine("Aby uzyskać informacje, napisz info lub jeśli wiesz, co zrobić, zrób to, co chcesz");
+            Console.Write("x może obsługiwać 0-69, y może obsługiwać 0-29, a ramki od 1 do 1199, dostępne kolory:" + " ");
             for (; clinfo != 16; clinfo++)
             {
                 
@@ -508,7 +508,7 @@ namespace CSharpAnimator
             }
             else if (w == "info")
             {
-                Console.WriteLine("\n"+"Witaj w CSharpAnimator! Tu masz wszystkie potrzebne informacje" + "\n" + "\n" + "Zakres wartości x wynosi 69, y wynosi 29, a ilość klatek 1199." + "\n" + "\n" + "kolory to:" + "\n");
+                Console.WriteLine("\n"+ "Witamy w CSharp Animator. Tutaj masz podstawowe informacje. " + "\n" + "\n" + "x może obsłużyć 0-69, y może obsłużyć 0-29 i klatki od 1 do 1199." + "\n" + "\n" + "dostępne kolory:" + "\n");
                 
                 for (; clinfo != 16; clinfo++)
                 {
@@ -593,18 +593,18 @@ namespace CSharpAnimator
                 }
                 clinfo = 0;
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine("\n"+"Przykładowy piksel ma wyglądać tak:" + "\n" + "\n" + "1" + "\n" + "0" + "\n" + "0" + "\n" + "15" + "\n" + "\n" + "z tego wyjdzie jeden piksel w lewym górnym rogu o kolorze białym w klatce 1.");
-                Console.WriteLine("\n" + "Kody klatki: info - informacje | w - zakończ tworzenie, opdal animację | ws nazwa_pliku_txt - zakończ tworzenie, odpal animację i zapisz ją do pliku txt (pliki txt są tworzone na dysku C: wśród folderów Windows,Program Files więc upewnij się że nie ma tam pliku txt o takiej samej nazwie)");
-                Console.WriteLine("\n" + "Twórca: Wojciech Wójtowicz/drenewoo     | Wersja programu: " + Version + "\n"); // <== zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | change offcial to modded if you modified code. Thanks!
+                Console.WriteLine("\n"+ "Przykładowy piksel powinien wyglądać tak:" + "\n" + "\n" + "1" + "\n" + "0" + "\n" + "0" + "\n" + "15" + "\n" + "\n" + "spowoduje to utworzenie jednego piksela w lewym górnym rogu, który jest biały w klatce 1.");
+                Console.WriteLine("\n" + "Kody ramek: info - informacje | w - zakończ tworzenie, wyjdź z animacji | ws nazwa_pliku_txt - zakończ tworzenie, zapisz do pliku txt");
+                Console.WriteLine("\n" + "Twórca: Wojciech Wójtowicz / drenewoo | Wersja programu: " + Version + "\n"); // <== zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | change offcial to modded if you modified code. Thanks!
                 Console.WriteLine("" + "\n");  //<== tutaj wpisz swój nick jeśli zmodyfikowałeś kod. Dziękuje! | write here your nick if you modified code. Thank you! 
-                Console.WriteLine("Kliknij enter jeśli chcesz wrócić");
+                Console.WriteLine("Kliknij enter, jeśli chcesz wrócić");
                 Console.ReadLine();
                 testanim();
             }
             else if(w == "ws")
             {
                 save = true;
-                Console.WriteLine("Wpisz jak ma się nazywać plik txt:");
+                Console.WriteLine("Ścieżka pliku txt (jeśli nie został utworzony, dodaj .txt na końcu):");
                 sciezka = Console.ReadLine();
 
                 FileWrite();
@@ -628,8 +628,8 @@ namespace CSharpAnimator
                 catch
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("Miły magik cię uratował, bo coś źle wpisałeś albo komputer cię robi w jaja" + "\n" + "                           #                    " + "\n" + "                    ##############" + "\n" + "              ##########################" + "\n" + "        ######################################" + "\n" + "          #                            #" + "\n" + "          #     0     /       0        #" + "\n" + "          #          /_               #" + "\n" + "             #         |__/        #" + "\n" + "                #                 #" + "\n" + "                   ########");
-                    Console.WriteLine("Nie musisz przepisywać całego, tylko to ostanie co wpisałeś źle, a teraz to zrób");
+                    Console.WriteLine("Miły magik uratował cię, ponieważ coś źle wpisałeś lub komputer cię schrzanił" + "\n" + "                           #                    " + "\n" + "                    ##############" + "\n" + "              ##########################" + "\n" + "        ######################################" + "\n" + "          #                            #" + "\n" + "          #     0     /       0        #" + "\n" + "          #          /_               #" + "\n" + "             #         |__/        #" + "\n" + "                #                 #" + "\n" + "                   ########");
+                    Console.WriteLine("Nie musisz przepisywać całej rzeczy, po prostu ostatnią rzecz, którą źle wpisałeś, a teraz zrób to");
                     testanim();
                 }
             }           
@@ -637,7 +637,7 @@ namespace CSharpAnimator
         
         static void data(int x, int y, int w, int c)
         {
-            frame[x, y, w] = "#";
+            frame[x, y, w] = "#" ;
             color[x,y,w] = c;
             testanim();
         }
