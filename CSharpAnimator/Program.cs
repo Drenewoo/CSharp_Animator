@@ -10,7 +10,8 @@ namespace CSharpAnimator
 {
     class Program
     {
-        static string Version = "1.0.1~official";
+        static string Version = "1.0.1~official"; // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
+        
         static int k = 0;
         
         static string sciezka = " ";
@@ -35,29 +36,7 @@ namespace CSharpAnimator
                 for (int c = 0; c < 1199; c++)
                 {
 
-                    for (int a = 0; a < 30; a++)
-                    {
-                        for (int b = 0; b < 70; b++)
-                        {
-                            
-                            if (frame[b, a, c] == "#")
-                            {
-                               
-                                Clear = false;
-                            }
-                        }
-                    }
-                    if (Clear == false)
-                    {
-                        GoRefresh(c);
-                        Clear = true;
-                    }
-                    else
-                    {
-                        c = 0;
-                        Clear = true;
-                        
-                    }
+                    GoRefresh(c);
                 }
             }
         }
@@ -242,7 +221,10 @@ namespace CSharpAnimator
         }
         static void GoRefresh(int v)
         {
-                for (int a = 0; a < 30; a++)
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Stworzone przez drenewoo (Wojciech Wójtowicz)" + "\n" + "CSharp Animator " + Version + "  Klatka:" + v);
+            Console.Write("\n");
+            for (int a = 0; a < 30; a++)
                 {
                     for (int b = 0; b < 70; b++)
                     {
@@ -392,11 +374,14 @@ namespace CSharpAnimator
                     //FileWrite(b, a, v, k);
                     savenow = true;
                     }
-                    Console.Write("\n");
-                }
-            Console.WriteLine("Stworzone przez drenewoo (Wojciech Wójtowicz)" + "\n" + "CSharp Animator " + Version); // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
+                Console.Write("\n");
+
+            }
             Thread.Sleep(100);
-                Console.Clear();     
+            Console.Clear();
+
+
+
         }
         static void Fresh()
         {
@@ -595,7 +580,7 @@ namespace CSharpAnimator
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\n"+ "Przykładowy piksel powinien wyglądać tak:" + "\n" + "\n" + "1" + "\n" + "0" + "\n" + "0" + "\n" + "15" + "\n" + "\n" + "spowoduje to utworzenie jednego piksela w lewym górnym rogu, który jest biały w klatce 1.");
                 Console.WriteLine("\n" + "Kody ramek: info - informacje | w - zakończ tworzenie, wyjdź z animacji | ws nazwa_pliku_txt - zakończ tworzenie, zapisz do pliku txt");
-                Console.WriteLine("\n" + "Twórca: Wojciech Wójtowicz / drenewoo | Wersja programu: " + Version + "\n"); // <== zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | change offcial to modded if you modified code. Thanks!
+                Console.WriteLine("\n" + "Twórca: Wojciech Wójtowicz / drenewoo | Wersja programu: " + Version + "\n");
                 Console.WriteLine("" + "\n");  //<== tutaj wpisz swój nick jeśli zmodyfikowałeś kod. Dziękuje! | write here your nick if you modified code. Thank you! 
                 Console.WriteLine("Kliknij enter, jeśli chcesz wrócić");
                 Console.ReadLine();
