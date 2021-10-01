@@ -579,7 +579,7 @@ namespace CSharpAnimator
                 clinfo = 0;
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine("\n"+ "Przykładowy piksel powinien wyglądać tak:" + "\n" + "\n" + "1" + "\n" + "0" + "\n" + "0" + "\n" + "15" + "\n" + "\n" + "spowoduje to utworzenie jednego piksela w lewym górnym rogu, który jest biały w klatce 1.");
-                Console.WriteLine("\n" + "Kody ramek: info - informacje | w - zakończ tworzenie, wyjdź z animacji | ws nazwa_pliku_txt - zakończ tworzenie, zapisz do pliku txt");
+                Console.WriteLine("\n" + "Kody ramek: info - informacje | w - zakończ tworzenie, odtwórz animację | ws nazwa_pliku_txt - zakończ tworzenie, zapisz do pliku txt");
                 Console.WriteLine("\n" + "Twórca: Wojciech Wójtowicz / drenewoo | Wersja programu: " + Version + "\n");
                 Console.WriteLine("" + "\n");  //<== tutaj wpisz swój nick jeśli zmodyfikowałeś kod. Dziękuje! | write here your nick if you modified code. Thank you! 
                 Console.WriteLine("Kliknij enter, jeśli chcesz wrócić");
