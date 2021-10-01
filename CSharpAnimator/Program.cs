@@ -589,7 +589,7 @@ namespace CSharpAnimator
             else if(w == "ws")
             {
                 save = true;
-                Console.WriteLine("Ścieżka pliku txt (jeśli nie został utworzony, dodaj .txt na końcu):");
+                Console.WriteLine("Ścieżka pliku txt (jeśli go nie ma to się utworzy, dodaj .txt na końcu ścieżki):");
                 sciezka = Console.ReadLine();
 
                 FileWrite();
@@ -613,7 +613,7 @@ namespace CSharpAnimator
                 catch
                 {
                     Console.ForegroundColor = ConsoleColor.Cyan;
-                    Console.WriteLine("Miły magik uratował cię, ponieważ coś źle wpisałeś lub komputer cię schrzanił" + "\n" + "                           #                    " + "\n" + "                    ##############" + "\n" + "              ##########################" + "\n" + "        ######################################" + "\n" + "          #                            #" + "\n" + "          #     0     /       0        #" + "\n" + "          #          /_               #" + "\n" + "             #         |__/        #" + "\n" + "                #                 #" + "\n" + "                   ########");
+                    Console.WriteLine("Miły magik uratował cię, ponieważ coś źle wpisałeś lub komputer się pomylił" + "\n" + "                           #                    " + "\n" + "                    ##############" + "\n" + "              ##########################" + "\n" + "        ######################################" + "\n" + "          #                            #" + "\n" + "          #     0     /       0        #" + "\n" + "          #          /_               #" + "\n" + "             #         |__/        #" + "\n" + "                #                 #" + "\n" + "                   ########");
                     Console.WriteLine("Nie musisz przepisywać całej rzeczy, po prostu ostatnią rzecz, którą źle wpisałeś, a teraz zrób to");
                     testanim();
                 }
