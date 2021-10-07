@@ -10,7 +10,7 @@ namespace CSharpAnimator
 {
     class Program
     {
-        static string Version = "1.0.2.1~official"; // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
+        static string Version = "1.0.3~official"; // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
         
         static int k = 0;
         
@@ -25,7 +25,7 @@ namespace CSharpAnimator
         static void Main(string[] args)
         {
             Console.Title = "CSharp Animator "+Version;
-            Console.SetWindowSize(130, 45);
+            Console.SetWindowSize(140, 40);
             Fresh();
             testanim();        
         }
