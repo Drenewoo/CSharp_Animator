@@ -514,7 +514,7 @@ namespace CSharpAnimator
                         Console.Clear();
                        
                         save = true;
-                        Console.WriteLine("Ścieżka pliku txt (jeśli go nie ma to się utworzy, dodaj .txt na końcu ścieżki):");
+                        Console.WriteLine("Txt file path (if not exist, program will create it | remember to add .txt at end of path):");
                         sciezka = Console.ReadLine();
                         FileWrite(true);
                     }
