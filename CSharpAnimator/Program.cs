@@ -717,7 +717,7 @@ namespace CSharpAnimator
                             else if (xm >= 16 && xm <=20)
                             {
                                 Console.Clear();
-                                Console.WriteLine("\n" + "Witamy w CSharp Animator. Tutaj masz podstawowe informacje. " + "\n" + "\n" + "x może obsłużyć 0-69, y może obsłużyć 0-29 i klatki od 1 do 1199." + "\n" + "\n" + "dostępne kolory:" + "\n");
+                                Console.WriteLine("\n" + "Witamy w CSharp Animator. Tutaj masz podstawowe informacje. " + "\n" + "\n" + "dostępne kolory:" + "\n");
 
                                 for (; clinfo != 16; clinfo++)
                                 {
@@ -802,8 +802,8 @@ namespace CSharpAnimator
                                 }
                                 clinfo = 0;
                                 Console.ForegroundColor = ConsoleColor.White;
-                                Console.WriteLine("\n" + "Przykładowy piksel powinien wyglądać tak:" + "\n" + "\n" + "1" + "\n" + "0" + "\n" + "0" + "\n" + "15" + "\n" + "\n" + "spowoduje to utworzenie jednego piksela w klatce 1 w lewym górnym rogu, który jest biały.");
-                                Console.WriteLine("\n" + "Kody ramek: info - informacje | w - zakończ tworzenie, odtwórz animację | ws nazwa_pliku_txt - zakończ tworzenie, zapisz do pliku txt");
+                                Console.WriteLine("Sterowanie w edytorze: poruszanie się - strzałki, rysuj - B, zmaż - N, zmiana klatki - z/x, zmiana koloru - c/v; Menu górne - esc, sterowanie - strzałki, zatwierdź - b, wyjdź z menu górnego - esc | Odtwarzacz: wejście do menu górnego - esc, sterowanie - strzałki, zatwierdź - b");
+                                Console.WriteLine("Tryb tekstowy - tryb kompatybilności, tutaj wkleja się kod animacji Ctrl+V");
                                 Console.WriteLine("\n" + "Twórca: Wojciech Wójtowicz / drenewoo | Wersja programu: " + Version + "\n");
                                 Console.WriteLine("" + "\n");  //<== tutaj wpisz swój nick jeśli zmodyfikowałeś kod. Dziękuje! | write here your nick if you modified code. Thank you! 
                                 Console.WriteLine("Kliknij enter, jeśli chcesz wrócić");
