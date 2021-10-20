@@ -564,7 +564,7 @@ namespace CSharpAnimator
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 0);
-            Console.WriteLine("Aby uzyskać informacje, napisz info lub jeśli wiesz, co zrobić, zrób to, co chcesz");
+            Console.WriteLine("Aby uzyskać informacje, napisz info lub jeśli wiesz, co zrobić to zrób co chcesz");
             Console.Write("x może obsługiwać 0-69, y może obsługiwać 0-29, a ramki od 1 do 1199, dostępne kolory:" + " ");
             for (; clinfo != 16; clinfo++)
             {
@@ -650,7 +650,7 @@ namespace CSharpAnimator
             clinfo = 0;
             Console.BackgroundColor = ConsoleColor.Blue;
             Console.ForegroundColor = ConsoleColor.Black;      
-            Console.WriteLine("\n" + "odtwórz|zapisz|info|" + "kolor:"+colore+"  |"+"                                                                              ");
+            Console.WriteLine("\n" + "odtwórz|zapisz|info|tryb tekstowy|" + "kolor:"+colore+"  |"+"                                                                              ");
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 7);
@@ -677,9 +677,11 @@ namespace CSharpAnimator
                         ckm = Console.ReadKey(true);
                         if (ckm.Key == ConsoleKey.RightArrow)
                         {
-                            if(xm == 0) { xm = xm + 8; }
+                            if (xm == 0) { xm = xm + 8; }
                             Thread.Sleep(100);
                             if (xm == 8) { xm = xm + 8; }
+                            Thread.Sleep(100);
+                            if (xm == 16) { xm = xm + 8; }
                             Console.SetCursorPosition(xm, 3);
 
                         }
@@ -688,9 +690,11 @@ namespace CSharpAnimator
                             if (xm == 8) { xm = xm - 8; }
                             Thread.Sleep(100);
                             if (xm == 16) { xm = xm - 8; }
+                            Thread.Sleep(100);
+                            if (xm == 24) { xm = xm - 8; }
                             Console.SetCursorPosition(xm, 3);
                         }
-                        if(ckm.Key == ConsoleKey.B)
+                        if (ckm.Key == ConsoleKey.B)
                         {
                             if (xm >= 0 && xm <= 6)
                             {
@@ -705,6 +709,10 @@ namespace CSharpAnimator
                                 sciezka = Console.ReadLine();
                                 
                                 FileWrite(false);
+                            }
+                            else if (xm == 24)
+                            {
+                                
                             }
                             else if (xm >= 16 && xm <=20)
                             {
@@ -814,7 +822,7 @@ namespace CSharpAnimator
                 }
                 if (ckii.Key == ConsoleKey.B)
                 {
-                    data(x, y - 7, f, colore);
+                    data(x, y - 7, f, colore, false);
                     
                     reload();
                 }
@@ -901,7 +909,7 @@ namespace CSharpAnimator
                 }
                 if(ckii.Key == ConsoleKey.N)
                 {
-                    data(x, y - 7, f, 0);
+                    data(x, y - 7, f, 0, false);
 
                     reload();
                 }
@@ -1069,8 +1077,28 @@ namespace CSharpAnimator
             }
             Console.CursorVisible = true;
         }
-        
-        static void data(int x, int y, int w, int c)
+        static void textmode()
+        {
+            int x = 0;
+            int y = 0;
+            int c = 0;
+            int q = 0; 
+            
+            string w = Console.ReadLine().ToLower();
+            if (w == "w")
+            {
+                testanim();
+            }
+            else
+            {
+                x = Int32.Parse(Console.ReadLine());
+                y = Int32.Parse(Console.ReadLine());
+                c = Int32.Parse(Console.ReadLine());
+                q = Int32.Parse(Console.ReadLine());
+            }
+            data(x, y, q, c, true);
+        }
+        static void data(int x, int y, int w, int c, bool tm)
         {
             if (c == 0)
             {
@@ -1082,7 +1110,14 @@ namespace CSharpAnimator
                 frame[x, y, w] = "#";
                 color[x, y, w] = c;
             }
-            testanim();
+            if (tm == true)
+            {
+                textmode();
+            }
+            else
+            {
+                testanim();
+            }
         }
     }
 }
