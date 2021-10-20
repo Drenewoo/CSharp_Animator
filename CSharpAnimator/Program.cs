@@ -564,8 +564,8 @@ namespace CSharpAnimator
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 0);
-            Console.WriteLine("Aby uzyskać informacje, napisz info lub jeśli wiesz, co zrobić to zrób co chcesz");
-            Console.Write("x może obsługiwać 0-69, y może obsługiwać 0-29, a ramki od 1 do 1199, dostępne kolory:" + " ");
+            Console.WriteLine("Aby uzyskać informacje, kliknij esc, następnie nakieruj kursor na info sterując strzałkami i kliknij b lub jeśli wiesz co zrobić to rób co chcesz");
+            Console.Write("dostępne kolory:" + " ");
             for (; clinfo != 16; clinfo++)
             {
                 
