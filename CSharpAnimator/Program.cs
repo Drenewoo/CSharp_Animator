@@ -846,7 +846,7 @@ namespace CSharpAnimator
                        
                     }
                 }
-                if (ckii.Key == ConsoleKey.LeftArrow)
+                if (ckii.Key == ConsoleKey.B    )
                 {
                     if (x > 0)
                     {
