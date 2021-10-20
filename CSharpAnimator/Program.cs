@@ -10,7 +10,7 @@ namespace CSharpAnimator
 {
     class Program
     {
-        static string Version = "1.1.0~official"; // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
+        static string Version = "1.1.0.1~official"; // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
         
         static int k = 0;
         
