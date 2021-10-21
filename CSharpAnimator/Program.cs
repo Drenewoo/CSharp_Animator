@@ -10,7 +10,7 @@ namespace CSharpAnimator
 {
     class Program
     {
-        static string Version = "1.1.0.1~official"; // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
+        static string Version = "1.1.0.2~official"; // <== moderze zmień official na modded jeśli zmodyfikowałeś kod. Dzięki! | modder change offcial to modded if you modified code. Thanks!
         
         static int k = 0;
         
@@ -495,7 +495,7 @@ namespace CSharpAnimator
                     }
                     Console.SetCursorPosition(0, x);
                 }
-                if (cki.Key == ConsoleKey.LeftArrow)
+                if (cki.Key == ConsoleKey.B)
                 {
                     if (x == 4)
                     {
@@ -815,6 +815,7 @@ namespace CSharpAnimator
                         if(ckm.Key == ConsoleKey.Escape)
                         {
                             Console.SetCursorPosition(x, y);
+                            testanim();
                            
                         }
 
